@@ -106,8 +106,8 @@ final class ToggleConfigTest extends TestCase
     ): void {
         $toggleConfig = new ToggleConfig($config);
 
-        $this->assertSame($expectedDriver, $toggleConfig->driver());
-        $this->assertSame($expectedDriverOptions, $toggleConfig->driverOptions());
+        self::assertSame($expectedDriver, $toggleConfig->driver());
+        self::assertSame($expectedDriverOptions, $toggleConfig->driverOptions());
     }
 
     public function wrongApiConfigurationProvider(): Generator
